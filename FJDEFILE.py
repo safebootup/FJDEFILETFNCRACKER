@@ -4,7 +4,8 @@ import keyboard
 from keyboard import is_pressed
 
 COOLDOWN = 2.5 #Time inbetween presses in seconds
-
+UID = "IecSKnnVvIolqsSYDxam"#Each person needs to input their own user ID here. It will change around every 1-2 days. What you see is probably mine
+o = "Rji3BXgoPxozKg8"#You also have your own o. I dunno what it is or what it does but you have to put it in every 1-2 days
 # The Purpose of this code is to create random 9 digit pdf codes to try and crack random
 # FJDEFILE civil docket PDFs
 # THIS CODE WAS MADE WITH CONSENT OF FJDEFILE AND ANY USE IN AN ATTEMPT TO GENUINELY BRING HARM TO SAID SERVICE IS NOT CONDONED
@@ -35,7 +36,7 @@ def main():
             #start url + random tfn code
             if(a and is_pressed("space")):#EMERGENCY BANDAID FIX HOLD SPACE TO QUIT AUTOMATION
                 exit()
-            hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=D7aVUloK_IolqsSYDxam&o=Mcg6LVhdVxozKg8&c=240803528&d=2&b=1&tfn="
+            hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=" + UID + "&o=" + o + "&c=240803528&d=2&b=1&tfn="
             fURL = random_tfn(hURL)
             keyboard.write(fURL)
             #open a new tab
