@@ -40,12 +40,12 @@ def main():
             hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=" + UID + "&o=" + o + "&c=240803528&d=2&b=1&tfn="
             fURL = random_tfn(hURL)
             keyboard.write(fURL)
-            #open a new tab
             keyboard.send("enter")
         else:
             #do nothing if they press any other key
             continue
         time.sleep(COOLDOWN) # seperate presses by X SECONDS
+        # open a new tab
         keyboard.send("ctrl+t")
 
 def random_tfn(hURL):
@@ -58,7 +58,7 @@ def random_tfn(hURL):
         #cheating array to set hit numbers to an active code, I would put a quick key here but I can't count
         #cheat = ["21","4","32","50","51","5","43","4","53"]
         #hit = cheat[i]
-        match hit:
+        match hit: # Theres a lot here its just a random number gen and every number is associated with a character
             case 0:
                tfn +="0"
             case 1:
