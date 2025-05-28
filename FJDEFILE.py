@@ -54,6 +54,9 @@ def random_tfn(hURL):
     while(i<9):
         i += 1
         hit= random.randint(0,61)
+        #cheating array to set hit numbers to an active code, I would put a quick key here but I can't count
+        #cheat = ["21","4","32","50","51","5","43","4","53"]
+        #hit = cheat[i]
         match hit:
             case 0:
                tfn +="0"
@@ -182,6 +185,7 @@ def random_tfn(hURL):
             case 62:
                 tfn +=("HOW DID YOU DO THAT")
     tfn += ".pdf"
+    #tfn ="q4YvTgH2N.pdf" testing with a working tfn making sure it works
     return hURL + tfn
 if __name__ == "__main__":
     main()
