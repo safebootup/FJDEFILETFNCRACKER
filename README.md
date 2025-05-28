@@ -4,7 +4,8 @@ To run the code simply run the attached exe/py and then press space while clicke
 * You must open FJDEFILE and travel to the civil docket section and click search by person or name
 * Type in last name brown and click on BROWN, STEPHANIE with case id 240803528
 * click on any pdf
-* look at the top url and copy paste your O and UID into the code
+* look at the top url and copy paste your O and UID into the code.
+* if you see a gray box with a sign saying pdf not found efs/.... you are all good any other error means something is wrong.
 * Run the code click on the url bar and have good luck to you.
 
 You must have the keyboard module the command to download it is
