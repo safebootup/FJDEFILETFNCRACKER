@@ -21,3 +21,4 @@ NOTE. THIS CODE WILL RUN IN THE BACKGROUND UNTIL YOU PRESS \ OR CTRL C THE CODE.
 
 you can also press = for automation(it will automatically press space for you) but I wouldnt recommend doing that.
 its easy to forget its in the background
+you MUST hold Space until the program stops to quit automation

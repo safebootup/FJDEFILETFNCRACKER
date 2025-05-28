@@ -1,6 +1,7 @@
 import time
 import random
 import keyboard
+from keyboard import is_pressed
 
 COOLDOWN = 2.5 #Time inbetween presses in seconds
 
@@ -12,25 +13,33 @@ COOLDOWN = 2.5 #Time inbetween presses in seconds
 
 
 def main():
-    close = True
+    close = True #Basically the loop
     a = False #automation because i dont want to mash spacebar. Dont tell anyone
+    event = ""
+    print("Do you want automation? if so press =, If not press anything WARNING: NOT RECOMMENDED TO QUIT YOU MUST HOLD SPACE UNTIL IT STOPS")
+    automation = keyboard.read_key()
+    if(automation == "="):
+        a = True
+        keyboard.write("\b")
+
     while(close): # This is the execution loop until you press \ it will generate a url with random tfn every space press
         print("Please Press Space while mounted to the URL bar to start, Press \ To Exit the code")
-        event = keyboard.read_key() # tell what key is being pressed
-        if ((event == "space" or event =="=") or a):
+        if(a == False):
+            event = keyboard.read_key() # tell what key is being pressed
+
+        if(event == chr(92)):
+            #escape code if they input \
+            close = False
+            exit() #prevents sleep from slowing down the quit and prevents code from doing a "one more loop"
+        elif (event == "space" or a):
             #start url + random tfn code
-            if(event == "="):
-                a=True
-                continue
+            if(a and is_pressed("space")):#EMERGENCY BANDAID FIX HOLD SPACE TO QUIT AUTOMATION
+                exit()
             hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=D7aVUloK_IolqsSYDxam&o=Mcg6LVhdVxozKg8&c=240803528&d=2&b=1&tfn="
             fURL = random_tfn(hURL)
             keyboard.write(fURL)
             #open a new tab
             keyboard.send("enter")
-        elif (event == chr(92)):
-            #escape code if they input \
-            close = False
-            exit() #prevents sleep from slowing down the quit and prevents code from doing a "one more loop"
         else:
             #do nothing if they press any other key
             continue
