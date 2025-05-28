@@ -5,6 +5,7 @@ To run the code simply run the attached exe/py and then press space while clicke
 * Type in last name brown and click on BROWN, STEPHANIE with case id 240803528
 * click on any pdf
 * look at the top url and copy paste your O and UID into the code
+* Run the code click on the url bar and have good luck to you.
 
 You must have the keyboard module the command to download it is
 ### How to install Keyboard
