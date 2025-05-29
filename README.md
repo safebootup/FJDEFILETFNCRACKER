@@ -9,6 +9,7 @@ To run the code simply run the attached exe/py and then press space while clicke
 * Run the code click on the url bar and good luck to you.
 
 note: the UID and O seem to expire every single day so you are going to need to copy and paste it often
+second note: sometimes you can use it without a UID or O at all(it must be empty) 
 You must have the keyboard module the command to download it is
 ### How to install Keyboard
 ```bash
