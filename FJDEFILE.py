@@ -2,10 +2,11 @@ import time
 import random
 import keyboard
 from keyboard import is_pressed
+import pyperclip
 
-COOLDOWN = 2.5 #Time inbetween presses in seconds
-UID = "IecSKnnVvIolqsSYDxam" #Each person needs to input their own user ID here. It will change around every 1-2 days. What you see is probably mine
-o = "Rji3BXgoPxozKg8" #You also have your own o. I dunno what it is or what it does but you have to put it in every 1-2 days
+COOLDOWN = .1 #Time inbetween presses in seconds
+UID = "D14ZTsnFBIolqsSYDxam" #Each person needs to input their own user ID here. It will change around every 1-2 days. What you see is probably mine
+o = "M6aaK2g8XxozKg8" #You also have your own o. I dunno what it is or what it does but you have to put it in every 1-2 days
 
 # The Purpose of this code is to create random 9 digit pdf codes to try and crack random
 # FJDEFILE civil docket PDFs
@@ -37,9 +38,11 @@ def main():
             #start url + random tfn code
             if(a and is_pressed("space")):#EMERGENCY BANDAID FIX HOLD SPACE TO QUIT AUTOMATION
                 exit()
-            hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=" + UID + "&o=" + o + "&c=240803528&d=2&b=1&tfn="
+            hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=" + UID + "&o=" + o + "&c=240501986&d=2&b=1&tfn="
             fURL = random_tfn(hURL)
-            keyboard.write(fURL)
+            #keyboard.write(fURL)
+            pyperclip.copy(fURL)
+            keyboard.send("ctrl+v")
             keyboard.send("enter")
         else:
             #do nothing if they press any other key
@@ -56,8 +59,8 @@ def random_tfn(hURL):
         i += 1
         hit= random.randint(0,61)
         #cheating array to set hit numbers to an active code, I would put a quick key here but I can't count
-        #cheat = ["21","4","32","50","51","5","43","4","53"]
-        #hit = cheat[i]
+        cheat = ["21","4","32","50","51","5","43","4","53"]
+        hit = cheat[i]
         match hit: # Theres a lot here its just a random number gen and every number is associated with a character
             case 0:
                tfn +="0"
