@@ -8,6 +8,7 @@ To run the code simply run the attached exe/py and then press space while clicke
 * if you see a gray box with a sign saying pdf not found efs/.... you are all good any other error means something is wrong.
 * Run the code click on the url bar and good luck to you.
 
+note: the UID and O seem to expire every single day so you are going to need to copy and paste it often
 You must have the keyboard module the command to download it is
 ### How to install Keyboard
 ```bash
