@@ -4,8 +4,8 @@ import keyboard
 from keyboard import is_pressed
 
 COOLDOWN = 2.5 #Time inbetween presses in seconds
-UID = "IecSKnnVvIolqsSYDxam" #Each person needs to input their own user ID here. It will change around every 1-2 days. What you see is probably mine
-o = "Rji3BXgoPxozKg8" #You also have your own o. I dunno what it is or what it does but you have to put it in every 1-2 days
+UID = "D14ZTsnFBIolqsSYDxam" #Each person needs to input their own user ID here. It will change around every 1-2 days. What you see is probably mine
+o = "M6aaK2g8XxozKg8" #You also have your own o. I dunno what it is or what it does but you have to put it in every 1-2 days
 
 # The Purpose of this code is to create random 9 digit pdf codes to try and crack random
 # FJDEFILE civil docket PDFs
@@ -56,8 +56,9 @@ def random_tfn(hURL):
         i += 1
         hit= random.randint(0,61)
         #cheating array to set hit numbers to an active code, I would put a quick key here but I can't count
-        #cheat = ["21","4","32","50","51","5","43","4","53"]
-        #hit = cheat[i]
+        #cheat = [26,7,7,45,60,9,50,7,60]
+        #hit = cheat[i-1]
+        #print(hit)
         match hit: # Theres a lot here its just a random number gen and every number is associated with a character
             case 0:
                tfn +="0"
