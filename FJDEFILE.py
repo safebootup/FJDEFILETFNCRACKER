@@ -38,7 +38,9 @@ def main():
             #start url + random tfn code
             if(a and is_pressed("space")):#EMERGENCY BANDAID FIX HOLD SPACE TO QUIT AUTOMATION
                 exit()
-            hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=" + UID + "&o=" + o + "&c=240803528&d=2&b=1&tfn="
+                #old and slow method lets get faster
+            # hURL = "https://fjdefile.phila.gov/efsfjd/zk_fjd_public_qry_00.zp_add_to_cart?uid=" + UID + "&o=" + o + "&c=240803528&d=2&b=1&tfn="
+            hURL = "https://fjdefile.phila.gov/efs/temp/"
             fURL = random_tfn(hURL)
             #keyboard.write(fURL)
             pyperclip.copy(fURL)
