@@ -61,8 +61,8 @@ def random_tfn(hURL):
         i += 1
         hit= random.randint(0,61)
         #cheating array to set hit numbers to an active code, I would put a quick key here but I can't count
-        cheat = [26,7,7,45,60,9,50,7,60]
-        hit = cheat[i-1]
+        #cheat = [26,7,7,45,60,9,50,7,60]
+        #hit = cheat[i-1]
         #print(hit)
         match hit: # Theres a lot here its just a random number gen and every number is associated with a character
             case 0:
